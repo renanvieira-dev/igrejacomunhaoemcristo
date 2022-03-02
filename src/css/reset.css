@@ -1,0 +1,446 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+html, body{
+    height: 100%;
+}
+
+/********************** HEADER **********************/
+
+#header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    padding: 0 70px !important;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/********************** LOGO **********************/
+
+.logo img{
+    width: 150px;
+}
+
+/********************** MENU **********************/
+
+#menu p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #343D66;
+}
+
+a {
+    color: #343D66;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: 600;
+    transition: .2s all ease-in-out;
+    padding: 5px 10px !important;
+    border-radius: 5px;
+  }
+  
+  #menu a:hover {
+    background: linear-gradient(to right, #343D66, #445081);
+    color: #fff;
+  }
+  
+  #logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  #logo img{
+      width: 140px;
+  }
+  
+  #menu {
+    display: flex;
+    list-style: none;
+    gap: 0.5rem;
+  }
+  
+  #menu a {
+    display: block;
+    padding: 0.5rem;
+  }
+  
+  #btn-mobile {
+    display: none;
+  }
+  
+  @media (max-width: 810px) {
+    #menu {
+      display: block;
+      position: absolute;
+      width: 100%;
+      top: 70px;
+      right: 0px;
+      background: #e7e7e7;
+      transition: 0.6s;
+      z-index: 1000;
+      height: 0px;
+      visibility: hidden;
+      overflow-y: hidden;
+    }
+    #menu p{
+        display: none;
+    }
+    #nav.active #menu {
+      height: calc(100vh - 70px);
+      visibility: visible;
+      overflow-y: auto;
+    }
+    #menu a {
+      padding: 1rem 0;
+      margin: 0 1rem;
+      border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+      text-align: center;
+      padding: 20px 0 !important;
+    }
+    #btn-mobile {
+      display: flex;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      border: none;
+      background: none;
+      cursor: pointer;
+      gap: 0.5rem;
+    }
+    #hamburger {
+      border-top: 2px solid;
+      width: 20px;
+      color: #26305a;
+    }
+    #hamburger::after,
+    #hamburger::before {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 2px;
+      background: currentColor;
+      margin-top: 5px;
+      transition: 0.3s;
+      position: relative;
+    }
+    #nav.active #hamburger {
+      border-top-color: transparent;
+    }
+    #nav.active #hamburger::before {
+      transform: rotate(135deg);
+    }
+    #nav.active #hamburger::after {
+      transform: rotate(-135deg);
+      top: -7px;
+    }
+  }
+
+/********************** PÁGINA HOME **********************/
+
+.home{
+    display: flex;
+    width: 100%;
+    height: 500px !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 450px;
+    text-align: center;
+    color: #FFF;
+    background: linear-gradient(to right, #343D66, #445081);
+}
+
+.home h1{
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.home h2{
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.home p{
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+
+.line{
+    width: 200px;
+    border-bottom: 1px solid #fff;
+    margin: 30px 0;
+}
+
+.text-1{
+    width: 700px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    font-weight: 900;
+    background-color: #26305a;
+    padding: 20px 10px;
+    border-radius: 7px;
+    box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.151);
+}
+
+.text-1 img{
+    width: 50px;
+    height: 50px;
+    margin-left: 20px;
+}
+
+span{
+    color: #232c57;
+}
+
+/********************** EFEITO DE ONDA DA PÁGINA HOME **********************/
+
+.effect-1{
+    width: 100%;
+    margin-top: -180px;
+    background: linear-gradient(to right, #343D66, #445081);
+}
+
+/********************** PAGÍNA SOBRE **********************/
+
+.sobre{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f3f4f5;
+    padding-bottom: 150px;
+}
+
+.sobre h1{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #232c57;
+    margin-bottom: 50px;
+    letter-spacing: 2px;
+}
+
+.group-1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 70px;
+}
+
+.group-1 img{
+    width: 500px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px rgba(51, 51, 51, 0.466);
+}
+
+.group-1 p{
+    margin: 0 40px;
+}
+
+/********************** EFEITO DE ONDA DA PÁGINA SOBRE **********************/
+
+.effect-2{
+    margin-top: -230px;
+}
+
+/********************** PAGÍNA CULTOS **********************/
+
+.cultos{
+    width: 100%;
+    height: 100%;
+    padding: 0 70px;
+    background: linear-gradient(to bottom, #343D66, #445081);
+    padding-bottom: 150px;
+}
+
+.cultos h1{
+    text-align: center;
+    font-weight: 600;
+    color: #fff;
+    font-size: 1.5rem;
+    margin-bottom: 50px;
+    letter-spacing: 2px;
+}
+
+.division-boxs{
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 100px;
+}
+
+.terca{
+    width: 400px;
+    margin: 10px;
+}
+
+/********************** EFEITO DE ONDA DA PÁGINA CULTOS **********************/
+
+.effect-3{
+    margin-top: -300px;
+}
+
+/********************** PAGÍNA LOCALIZAÇÃO **********************/
+
+.localizacao{
+    width: 100%;
+    height: 100%;
+    background-color: #f3f4f5;
+    padding: 0 70px;
+    padding-bottom: 130px;
+}
+
+.localizacao h1{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #26305a;
+    letter-spacing: 2px;
+    padding-bottom: 50px;
+}
+
+.div-local{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.map{
+    margin: 10px;
+    box-shadow: 4px 4px 2px rgba(51, 51, 51, 0.377);
+    border-radius: 15px !important;
+}
+
+.text{
+    display: flex;
+}
+
+.text h1{
+    font-weight: 300;
+}
+
+footer{
+    background-color: #232c57;
+    color: #fff !important;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer a{
+    color: #fff;
+}
+
+/******************** RESPONSIVIDADE DA PÁGINA ********************/
+
+@media screen and (max-width: 414px){
+    .home{
+        width: 100vw;
+        height: 100% !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding-top: -20px !important;
+    }
+}
+
+@media screen and (max-width: 542px){
+    .home{
+        height: 700px !important;
+    }
+}
+
+@media screen and (max-width: 810px){
+    .home{
+        height: 650px !important;
+    }
+
+    #header{
+        padding: 0 20px !important;
+        width: 100%;
+    }
+
+
+    .home{
+        display: block;
+        padding-top: 20px;
+    }
+
+    .home h1{
+        font-size: 2rem;
+        width: 100% !important;
+        padding: 0 20px !important;
+    }
+
+    .home h2{
+        font-size: 1rem;
+        margin-top: 20px;
+        width: 100% !important;
+        padding: 0 20px !important;
+    }
+
+    .home p{
+        font-size: 1rem;
+        font-weight: 600;
+        width: 100% !important;
+        margin-bottom: -30px;
+        padding: 0 20px !important;
+        margin-bottom: 30px;
+    }
+
+    .line{
+        display: none;
+    }
+
+    .text-1{
+        width: 100% !important;
+        margin-left: 0px;
+        display: flex;
+        justify-content: center;
+        font-size: 1.5rem !important;
+        flex-direction: column;
+        font-size: 1rem;
+        font-weight: 500 !important;
+        margin-top: 60px;
+        background-color: transparent !important;
+        box-shadow: none;
+    }
+
+    .group-1{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .group-1 img{
+        margin-bottom: 40px;
+    }
+
+    .group-1 p{
+        width: 100%;
+        padding-bottom: 80px;
+    }
+
+    .map iframe{
+        width: 350px;
+        height: 200px;
+    }
+    
+    .footer{
+        color: #fff;
+    }
+}
